@@ -1,8 +1,10 @@
+@import url();
+
 /* variables */
 
 :root {
-    --my-color: rgb(0, 182, 248);
-    --dark: rgb(38, 26, 26);
+    --my-color: rgb(0, 156, 167);
+    --dark: rgb(0, 110, 150);
     --light-dark: rgb(34, 30, 30);
     --white: #ffff;
     --light-white: rgb(208, 208, 208);
@@ -10,3 +12,41 @@
 
 
 /*-- All elements---*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: var(--light-white);
+    background-color: var(--dark);
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1170px;
+    background-color: ;
+    margin: auto;
+}
