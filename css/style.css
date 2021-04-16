@@ -108,6 +108,32 @@ h6 {
     border-radius: 50%;
 }
 
+.bg_animation_effect div:nth-child(even) {
+    animation: evenItems 9s linear infinite;
+}
+
+@keyframes evenItems {
+    0% {
+        transform: translateY(0vh);
+    }
+    100% {
+        transform: translateY(12.5vh);
+    }
+}
+
+.bg_animation_effect div:nth-child(odd) {
+    animation: oddItems 8s linear infinite;
+}
+
+@keyframes oddItems {
+    0% {
+        transform: translateY(0vh);
+    }
+    100% {
+        transform: translateY(-12.5vh);
+    }
+}
+
 
 /* About Section */
 
