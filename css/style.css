@@ -1,4 +1,4 @@
-@import url();
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 /* variables */
 
@@ -8,6 +8,7 @@
     --light-dark: rgb(34, 30, 30);
     --white: #ffff;
     --light-white: rgb(208, 208, 208);
+    --other-color: rgb(128, 115, 0);
 }
 
 
@@ -28,7 +29,7 @@
 body {
     font-size: 16px;
     line-height: 1.5;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     color: var(--light-white);
     background-color: var(--dark);
@@ -45,8 +46,138 @@ img {
     vertical-align: middle;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--light-white);
+    font-weight: 800;
+}
+
 .container {
     max-width: 1170px;
-    background-color: ;
     margin: auto;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* SCroll Bar */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--my-color);
+}
+
+
+/* BG Animation*/
+
+.bg_animation_effect {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+}
+
+.bg_animation_effect div {
+    height: 4px;
+    width: 4px;
+    background-color: var(--other-color);
+    margin-left: calc((100%-40px)/11);
+    border-radius: 50%
+}
+
+
+/* About Section */
+
+.about-me .min-vh-100 {
+    padding: 120px 15px;
+}
+
+.about_content {
+    max-width: 620px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.about_content img {
+    max-width: 150px;
+    border: 5px solid var(--light-dark);
+    border-radius: 50%;
+    margin: 0 0 15px;
+}
+
+.about_content h1 {
+    font-size: 30px;
+    margin: 0 0 8px;
+}
+
+.about_content p span {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.about_content p a {
+    color: var(--my-color);
+    text-transform: capitalize;
+    font-weight: 600;
+    position: relative;
+}
+
+.about_content p a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    height: 1px;
+    width: 0%;
+    background-color: var(--my-color);
+    transition: width 0.3s ease;
+}
+
+.about_content p a:hover::before {
+    width: 100%;
+}
+
+.about_content h2 {
+    margin: 20px 0 5px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.about_content .my_skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about_content .skills_item {
+    background-color: var(--other-color);
+    margin: 0 4px 10px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: capitalize;
 }
